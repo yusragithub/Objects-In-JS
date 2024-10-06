@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argument Object in JS</title>
+</head>
+<body>
+    <h1>Argument Object in JS</h1>
+    <h2>Finding the largest number</h2>
+    <p id="p1"></p>
+    <script>
+        function findMax() {
+            max = 0;
+            for(i=0; i<arguments.length; i++) {
+            if (arguments[i]>max) {
+                max = arguments[i];
+            }
+            }
+            return max;
+        }
+        document.getElementById("p1").innerHTML = findMax(18685, 27556709, 364542567890, 35, 50, 61234567890, 7098765432123)
+    </script>
+</body>
+</html>
